@@ -8,9 +8,9 @@ export default function DestinationCard({ destination }) {
   return (
     <motion.article
       variants={fadeUp}
-      whileHover={{ y: -8 }}
-      transition={{ type: "spring", stiffness: 260, damping: 22 }}
-      className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-noir-soft shadow-xl shadow-black/40 transition-colors hover:border-gold/50"
+      whileHover={{ y: -10 }}
+      transition={{ type: "spring", stiffness: 240, damping: 20 }}
+      className="card-premium group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-noir-soft shadow-xl shadow-black/40 hover:border-gold/60"
     >
       <div className="relative h-60 overflow-hidden">
         <img
@@ -54,7 +54,7 @@ export default function DestinationCard({ destination }) {
           </div>
           <Link
             to={`/destinations/${destination.id}`}
-            className="group/btn inline-flex items-center gap-2 rounded-full border border-gold/50 px-4 py-2 text-sm font-medium text-gold transition-all hover:bg-gold hover:text-noir"
+            className="group/btn inline-flex items-center gap-2 rounded-full border border-gold/50 px-4 py-2 text-sm font-medium text-gold transition-all duration-500 hover:border-gold hover:bg-gold hover:text-noir hover:shadow-[0_0_22px_-6px_rgba(212,175,55,0.8)]"
           >
             Voir plus
             <ArrowRight
@@ -64,6 +64,9 @@ export default function DestinationCard({ destination }) {
           </Link>
         </div>
       </div>
+
+      {/* Premium sheen sweep on hover */}
+      <span className="card-sheen rounded-2xl" />
     </motion.article>
   );
 }

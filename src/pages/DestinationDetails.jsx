@@ -236,7 +236,7 @@ export default function DestinationDetails() {
 
               <Link
                 to={`/reservation/${destination.id}`}
-                className="group mt-7 flex w-full items-center justify-center gap-2 rounded-full bg-gold px-6 py-3.5 text-base font-semibold text-noir transition-all hover:shadow-lg hover:shadow-gold/30"
+                className="btn-glow-gold group mt-7 flex w-full items-center justify-center gap-2 rounded-full bg-gold px-6 py-3.5 text-base font-semibold text-noir"
               >
                 Réserver ce voyage
                 <ArrowRight

@@ -5,6 +5,7 @@ import Hero from "../components/Hero.jsx";
 import PageTransition from "../components/PageTransition.jsx";
 import SectionHeading from "../components/SectionHeading.jsx";
 import DestinationCard from "../components/DestinationCard.jsx";
+import TravelQuiz from "../components/TravelQuiz.jsx";
 import { destinations } from "../data/destinations.js";
 import { fadeUp, staggerContainer } from "../hooks/useScrollReveal.js";
 
@@ -44,7 +45,10 @@ export default function Home() {
       <Hero />
 
       {/* Stats */}
-      <section className="border-y border-white/5 bg-noir-soft">
+      <section
+        id="decouvrir"
+        className="scroll-mt-24 border-y border-white/5 bg-noir-soft"
+      >
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-5 py-12 sm:px-8 md:grid-cols-4">
           {stats.map((stat) => (
             <motion.div
@@ -95,6 +99,23 @@ export default function Home() {
               className="transition-transform group-hover:translate-x-1"
             />
           </Link>
+        </div>
+      </section>
+
+      {/* Travel quiz */}
+      <section
+        id="quiz"
+        className="scroll-mt-24 border-t border-white/5 bg-noir-soft"
+      >
+        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 md:py-28">
+          <SectionHeading
+            eyebrow="Personnalisation"
+            title="Quelle époque est faite pour vous ?"
+            subtitle="Répondez à quatre questions et laissez nos chrono-conseillers vous révéler la destination idéale."
+          />
+          <div className="mt-14">
+            <TravelQuiz />
+          </div>
         </div>
       </section>
 
@@ -154,7 +175,7 @@ export default function Home() {
             </p>
             <Link
               to="/reservation"
-              className="group mt-8 inline-flex items-center gap-2 rounded-full bg-gold px-8 py-3.5 text-base font-semibold text-noir transition-all hover:shadow-lg hover:shadow-gold/30"
+              className="btn-glow-gold group mt-8 inline-flex items-center gap-2 rounded-full bg-gold px-8 py-3.5 text-base font-semibold text-noir"
             >
               Réserver mon voyage
               <ArrowRight

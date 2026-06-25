@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import PageTransition from "../components/PageTransition.jsx";
 import SectionHeading from "../components/SectionHeading.jsx";
 import DestinationCard from "../components/DestinationCard.jsx";
+import TravelQuiz from "../components/TravelQuiz.jsx";
 import { destinations } from "../data/destinations.js";
 import { staggerContainer } from "../hooks/useScrollReveal.js";
 
@@ -34,6 +35,23 @@ export default function Destinations() {
             <DestinationCard key={destination.id} destination={destination} />
           ))}
         </motion.div>
+      </section>
+
+      {/* Travel quiz */}
+      <section
+        id="quiz"
+        className="scroll-mt-24 border-t border-white/5 bg-noir-soft"
+      >
+        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 md:py-28">
+          <SectionHeading
+            eyebrow="Personnalisation"
+            title="Hésitez-vous encore ?"
+            subtitle="Laissez notre quiz vous guider vers l'époque qui vous correspond le mieux."
+          />
+          <div className="mt-14">
+            <TravelQuiz />
+          </div>
+        </div>
       </section>
     </PageTransition>
   );

@@ -22,14 +22,21 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header
+    <motion.header
+      initial={{ y: -90, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "border-b border-gold/15 bg-noir/85 backdrop-blur-xl"
+          ? "border-b border-gold/15 bg-noir/85 shadow-lg shadow-black/30 backdrop-blur-xl"
           : "border-b border-transparent bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
+      <nav
+        className={`mx-auto flex max-w-7xl items-center justify-between px-5 transition-all duration-500 sm:px-8 ${
+          scrolled ? "py-2.5" : "py-4"
+        }`}
+      >
         <Link
           to="/"
           className="group flex items-center gap-2.5"
@@ -72,7 +79,7 @@ export default function Navbar() {
           ))}
           <Link
             to="/destinations"
-            className="rounded-full border border-gold bg-gold px-5 py-2 text-sm font-semibold text-noir transition-all hover:bg-transparent hover:text-gold"
+            className="btn-glow-gold rounded-full border border-gold bg-gold px-5 py-2 text-sm font-semibold text-noir hover:bg-transparent hover:text-gold"
           >
             Réserver
           </Link>
@@ -126,6 +133,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </motion.header>
   );
 }

@@ -215,7 +215,7 @@ export default function About() {
           </p>
           <Link
             to="/reservation"
-            className="group mt-8 inline-flex items-center gap-2 rounded-full bg-gold px-8 py-3.5 text-base font-semibold text-noir transition-all hover:shadow-lg hover:shadow-gold/30"
+            className="btn-glow-gold group mt-8 inline-flex items-center gap-2 rounded-full bg-gold px-8 py-3.5 text-base font-semibold text-noir"
           >
             Réserver mon voyage
             <ArrowRight

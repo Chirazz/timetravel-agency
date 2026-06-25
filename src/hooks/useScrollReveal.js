@@ -29,3 +29,24 @@ export const scaleIn = {
     transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
   },
 };
+
+// Word-by-word reveal used for the Hero title.
+export const heroTitleContainer = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.12, delayChildren: 0.2 },
+  },
+};
+
+export const heroTitleWord = {
+  hidden: { opacity: 0, y: 40, rotateX: 35 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    rotateX: 0,
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+// Shared viewport config for progressive scroll reveals.
+export const revealViewport = { once: true, amount: 0.25 };
