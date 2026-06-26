@@ -128,7 +128,7 @@ automatiquement).
 ## Auteurs
 
 - Chiraz BELLARA
-- Mohamed Ali SGHAGHI
+- Mohamed Ali SGHARI
 
 ## Licence
 
