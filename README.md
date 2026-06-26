@@ -13,7 +13,7 @@ https://github.com/Chirazz/timetravel-agency
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38BDF8?logo=tailwindcss&logoColor=white)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-0055FF?logo=framer&logoColor=white)
 
-## Description
+## Description detaillé
 
 **TimeTravel Agency** est une webapp immersive présentant une agence fictive de voyages
 dans le temps. L'utilisateur explore trois époques (Paris 1889, Florence 1504,
